@@ -1,0 +1,31 @@
+// Method 1 - With Loop:
+
+// class Solution {
+// public:
+//     bool isPowerOfTwo(int n) {
+//         int cnt = 0;
+
+//         while (n != 0) {
+//             if (n & 1) {
+//                 cnt++;
+//             }
+//             if (cnt > 1) break;
+//             n = n >> 1;
+//         }
+
+//         if (cnt == 1) return true;
+//         else return false;
+//     }
+// };
+
+/*_______________________________________________________________________*/
+
+// Method 2 - Without Loop - Most Efficient:
+
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+        if (n > 0 && (n & (n - 1)) == 0) return true;
+        else return false; 
+    }
+};
